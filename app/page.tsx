@@ -297,6 +297,7 @@ Flexible packages designed around your website's needs. Monthly or annual billin
                   title: "E-Commerce Platform",
                   category: "Online Store",
                   image: "/portfolio-1.jpg",
+                  link: "https://cherusportswear.vercel.app",
                 },
                 {
                   title: "SaaS Dashboard",
@@ -332,7 +333,14 @@ Flexible packages designed around your website's needs. Monthly or annual billin
                       className="mt-2 bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm"
                       asChild
                     >
-                      <a href="#contact">View Project →</a>
+                      <a
+                        href={project.link || "#contact"}
+                        {...(project.link
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
+                      >
+                        View Project →
+                      </a>
                     </Button>
                   </div>
                 </div>
