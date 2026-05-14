@@ -294,12 +294,13 @@ Flexible packages designed around your website's needs. Monthly or annual billin
                   title: "E-Commerce Platform",
                   category: "Online Store",
                   image: "/portfolio-1.jpg",
-                  link: "https://cherusportswear.vercel.app",
+                  link: "https://cherusportswear.co.ke",
                 },
                 {
                   title: "SaaS Dashboard",
                   category: "Web Application",
                   image: "/portfolio-2.jpg",
+                  link: "https://easytrainer.co.ke",
                 },
                 {
                   title: "Restaurant Website",
