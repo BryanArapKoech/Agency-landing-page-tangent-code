@@ -164,8 +164,7 @@ export default function HomePage() {
               Modern Websites for Growing Businesses
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80 sm:text-xl">
-              Get a professional website in 7 days — fixed pricing, no
-              surprises. Built with modern technology and designed to convert.
+              Get a professional website in 7 days. Built with modern technology and designed to convert.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
@@ -215,8 +214,7 @@ export default function HomePage() {
                     responsive, and optimized for search engines.
                   </p>
                   <p className="mt-4 text-lg font-medium text-foreground">
-                    Starting from 60,000 Kshs.
-Every project is unique. Get a custom quote tailored to your specific needs and budget.
+                    Every project is unique. Get a custom quote tailored to your specific needs and budget.
                   </p>
                   <Button className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90 shadow-md" asChild>
                     <a href="#contact">Get Custom Quote</a>
@@ -239,8 +237,7 @@ Every project is unique. Get a custom quote tailored to your specific needs and 
                     converting digital experience.
                   </p>
                   <p className="mt-4 text-lg font-medium text-foreground">
-                    Starting from 60,000 Kshs.
-Pricing based on your current site and desired improvements. Free consultation included.
+                    Pricing is based on your current site and desired improvements. Free consultation included.
                   </p>
                   <Button className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90 shadow-md" asChild>
                     <a href="#contact">Get Custom Quote</a>
