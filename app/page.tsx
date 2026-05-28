@@ -27,38 +27,49 @@ export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get('name') as string,
-      email: formData.get('email') as string,
-      service: formData.get('service') as string,
-      message: formData.get('message') as string,
-    };
 
-    // Simulate form submission
-    try {
-      // Here you would typically send the data to your backend
-      console.log('Form submitted:', data);
 
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
 
-      // Reset form
-      e.currentTarget.reset();
 
-      // Show success message (you could use a toast library here)
-      alert('Thank you for your message! We\'ll get back to you within 24 hours.');
-    } catch (error) {
-      console.error('Form submission error:', error);
-      alert('There was an error sending your message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
+
+const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  const form = e.currentTarget; // save ref before async
+  setIsSubmitting(true);
+
+  const formData = new FormData(form);
+  const data = {
+    name: formData.get("name") as string,
+    email: formData.get("email") as string,
+    service: formData.get("service") as string,
+    message: formData.get("message") as string,
   };
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) throw new Error("Failed");
+
+    form.reset();
+    alert("Thank you! We'll get back to you within 24 hours.");
+  } catch {
+    alert("There was an error sending your message. Please try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+
+
+
+
+
+  
 
   return (
     <div className="min-h-screen bg-background">
@@ -458,8 +469,7 @@ Flexible packages designed around your website's needs. Monthly or annual billin
                   Modern Technology
                 </h3>
                 <p className="mt-2 text-primary-foreground/80">
-                  AI-powered tools, mobile-first design, and cutting-edge
-                  frameworks.
+                  AI-powered tools, mobile-first design.
                 </p>
               </div>
             </div>
@@ -487,7 +497,7 @@ Flexible packages designed around your website's needs. Monthly or annual billin
                     <div>
                       <p className="text-sm text-muted-foreground">Email</p>
                       <p className="font-medium text-foreground">
-                        contact@tangentcode.studio
+                        contact@tangentcodestudios.co.ke
                       </p>
                     </div>
                   </div>
@@ -582,14 +592,14 @@ Flexible packages designed around your website's needs. Monthly or annual billin
                       />
                     </div>
 
-                    <Button
+                    <button
                       type="submit"
-                      size="lg"
-                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg"
+                      className="w-full rounded-md bg-primary px-4 py-3 text-base font-medium text-primary-foreground shadow-lg hover:bg-primary/90 disabled:opacity-50"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}
-                    </Button>
+                    </button>
+
                   </form>
                 </CardContent>
               </Card>
