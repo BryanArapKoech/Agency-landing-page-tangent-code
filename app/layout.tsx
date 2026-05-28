@@ -11,23 +11,12 @@ export const metadata: Metadata = {
   title: 'Tangent Code Studios | Modern Websites for Growing Businesses',
   description: 'Get a professional website in 7 days - fixed pricing, no surprises. Website development, redesign, and maintenance services.',
   generator: 'v0.app',
+  
+
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+  icon: '/TCS_logo_favicon.png',
+  apple: '/TCS_logo_favicon.png',
+},
 }
 
 export default function RootLayout({
