@@ -115,6 +115,15 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             >
               Contact Us
             </a>
+
+            <Button
+              className="rounded-full bg-primary px-5 text-primary-foreground hover:bg-primary/90 shadow-md"
+              asChild
+            >
+              <a href="#contact">Get a Quote</a>
+            </Button>
+
+
           </nav>
 
           {/* Mobile Menu Button */}
@@ -161,9 +170,12 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 className="text-sm font-medium text-muted-foreground"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Contact
+                Contact Us
               </a>
-              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg" asChild>
+              <Button
+                className="w-full rounded-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg"
+                asChild
+              >
                 <a href="#contact">Get a Quote</a>
               </Button>
             </div>
@@ -184,15 +196,16 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
                 size="lg"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg sm:w-auto"
+                className="w-full bg-white text-primary hover:bg-white/90 shadow-lg sm:w-auto"
                 asChild
               >
                 <a href="#portfolio">View Our Work</a>
               </Button>
+
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-lg sm:w-auto"
+                className="w-full border-white bg-transparent text-white hover:bg-white hover:text-primary shadow-lg sm:w-auto"
                 asChild
               >
                 <a href="#contact">Get a Quote</a>
@@ -611,12 +624,12 @@ Flexible packages designed around your website's needs. Monthly or annual billin
           </div>
         </section>
       </main>
-
       {/* Footer */}
-      <footer className="border-t border-border bg-card px-4 py-12 sm:px-6 lg:px-8">
+      <footer className="border-t border-border bg-card px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-            <div className="flex items-center gap-2">              
+          <div className="grid items-center gap-6 text-center md:grid-cols-3 md:text-left">
+            {/* Left: Brand */}
+            <div className="flex items-center justify-center gap-2 md:justify-start">
               <Image
                 src="/TCS_logo_favicon.png"
                 alt="Tangent Code Studios"
@@ -627,25 +640,50 @@ Flexible packages designed around your website's needs. Monthly or annual billin
               <span className="text-lg font-semibold text-foreground">
                 Tangent Code Studios
               </span>
-              {/* Social Icons */}
-              <div className="flex items-center gap-4">
-                <a href="https://x.com/tangentcodestudios" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <a href="https://web.facebook.com/profile.php?id=61589872315079" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
-                <a href="https://tiktok.com/@tangentcodestudios" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
-                </a>
-              </div>
-
-
             </div>
 
-            <p className="text-sm text-muted-foreground">
-              A craft of Tangent Code Studios. © {new Date().getFullYear()} All
-              rights reserved.
+            {/* Middle: Social Icons */}
+            <div className="flex items-center justify-center gap-5">
+              <a
+                href="https://x.com/tangentcodestudios"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+                aria-label="Tangent Code Studios on X"
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+
+              <a
+                href="https://web.facebook.com/profile.php?id=61589872315079"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+                aria-label="Tangent Code Studios on Facebook"
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </a>
+
+              <a
+                href="https://tiktok.com/@tangentcodestudios"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+                aria-label="Tangent Code Studios on TikTok"
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Right: Copyright */}
+            <p className="text-sm text-muted-foreground md:text-right">
+              A craft of Tangent Code Studios. © {new Date().getFullYear()} All rights reserved.
             </p>
           </div>
         </div>
@@ -653,11 +691,10 @@ Flexible packages designed around your website's needs. Monthly or annual billin
 
       {/* WhatsApp Float Button */}
       <a
-      
         href="https://wa.me/254725717365"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition-transform hover:scale-110"
+        className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition-transform hover:scale-110 sm:bottom-6 sm:right-6"
         style={{ backgroundColor: '#25D366' }}
         aria-label="Chat on WhatsApp"
       >
