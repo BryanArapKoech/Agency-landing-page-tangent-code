@@ -376,6 +376,50 @@ Flexible packages designed around your website's needs. Monthly or annual billin
           </div>
         </section>
 
+        {/* Results Dashboard Section */}
+        <section className="bg-primary px-4 py-16 text-primary-foreground sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="rounded-3xl border border-white/10 bg-white/10 p-4 shadow-2xl backdrop-blur sm:p-6">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                <div className="rounded-2xl bg-white p-6 text-center text-primary shadow-lg">
+                  <p className="text-4xl font-bold">50+</p>
+                  <p className="mt-3 text-sm font-medium text-muted-foreground">
+                    Websites Launched
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-white p-6 text-center text-primary shadow-lg">
+                  <p className="text-4xl font-bold">100+</p>
+                  <p className="mt-3 text-sm font-medium text-muted-foreground">
+                    Happy Clients
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-white p-6 text-center text-primary shadow-lg">
+                  <p className="text-4xl font-bold">7 Days</p>
+                  <p className="mt-3 text-sm font-medium text-muted-foreground">
+                    Average Turnaround
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-white p-6 text-center text-primary shadow-lg">
+                  <p className="text-4xl font-bold">100%</p>
+                  <p className="mt-3 text-sm font-medium text-muted-foreground">
+                    Mobile Responsive
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-accent p-6 text-center text-accent-foreground shadow-lg">
+                  <p className="text-4xl font-bold">24hr</p>
+                  <p className="mt-3 text-sm font-medium text-accent-foreground/80">
+                    Response Time
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* How It Works Section */}
         <section id="how-it-works" className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
