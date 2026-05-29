@@ -672,7 +672,7 @@ Flexible packages designed around your website's needs. Monthly or annual billin
       {/* Footer */}
       <footer className="border-t border-border bg-card px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-6 text-center md:grid-cols-3 md:text-left">
+          <div className="grid items-center gap-6 text-center md:grid-cols-[1fr_auto_1.5fr] md:text-left">
             {/* Left: Brand */}
             <div className="flex items-center justify-center gap-2 md:justify-start">
               <Image
@@ -688,7 +688,7 @@ Flexible packages designed around your website's needs. Monthly or annual billin
             </div>
 
             {/* Middle: Social Icons */}
-            <div className="flex items-center justify-center gap-5">
+            <div className="flex items-center justify-center gap-3">
               <a
                 href="https://x.com/tangentcodestudios"
                 target="_blank"
@@ -727,7 +727,7 @@ Flexible packages designed around your website's needs. Monthly or annual billin
             </div>
 
             {/* Right: Copyright */}
-            <p className="text-sm text-muted-foreground md:text-right">
+            <p className="text-base font-semibold text-foreground md:text-right md:whitespace-nowrap">
               A craft of Tangent Code Studios. © {new Date().getFullYear()} All rights reserved.
             </p>
           </div>
