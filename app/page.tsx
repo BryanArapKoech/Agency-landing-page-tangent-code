@@ -321,19 +321,20 @@ Flexible packages designed around your website's needs. Monthly or annual billin
                 {
                   title: "E-Commerce Platform",
                   category: "Online Store",
-                  image: "/portfolio-1.jpg",
+                  image: "/portfolio/1cherussportswear.png",
                   link: "https://cherusportswear.co.ke",
                 },
                 {
                   title: "SaaS Dashboard",
-                  category: "Web Application",
-                  image: "/portfolio-2.jpg",
+                  category: "Education Web Application",
+                  image: "/portfolio/2easytrainer.png",
                   link: "https://easytrainer.co.ke",
                 },
                 {
-                  title: "Restaurant Website",
-                  category: "Local Business",
-                  image: "/portfolio-3.jpg",
+                  title: "Sports News Website",
+                  category: "Sports News Portal",
+                  image: "/portfolio/3cheruspulse.png",
+                  link: "https://cherussportswear.co.ke/blog.html",
                 },
               ].map((project) => (
                 <div
