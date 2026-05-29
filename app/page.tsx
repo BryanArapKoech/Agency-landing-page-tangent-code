@@ -179,7 +179,7 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               Modern Websites for Growing Businesses
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80 sm:text-xl">
-              Get a professional website in 7 days. Built with modern technology and designed to convert.
+              Get a professional website built with modern technology and designed to convert.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
