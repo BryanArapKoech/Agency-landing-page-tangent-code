@@ -75,8 +75,9 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2">
+        <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+          {/* Brand */}
+          <a href="#" className="flex shrink-0 items-center gap-2">
             <Image
               src="/TCS_logo_favicon.png"
               alt="Tangent Code Studios"
@@ -84,51 +85,88 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               height={36}
               className="rounded-lg"
             />
-            <span className="text-lg font-semibold text-foreground">
+            <span className="whitespace-nowrap text-lg font-semibold text-foreground">
               Tangent Code Studios
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="ml-auto hidden items-center gap-5 min-[992px]:flex min-[1200px]:gap-7 min-[1400px]:absolute min-[1400px]:left-1/2 min-[1400px]:ml-0 min-[1400px]:-translate-x-1/2">
             <a
               href="#services"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="whitespace-nowrap text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               Services
             </a>
             <a
               href="#portfolio"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="whitespace-nowrap text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               Portfolio
             </a>
             <a
               href="#how-it-works"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="whitespace-nowrap text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               How It Works
             </a>
             <a
               href="#contact"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="whitespace-nowrap text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               Contact Us
             </a>
 
             <Button
-              className="rounded-full bg-primary px-5 text-primary-foreground hover:bg-primary/90 shadow-md"
+              className="rounded-full bg-primary px-5 text-primary-foreground shadow-md hover:bg-primary/90"
               asChild
             >
               <a href="#contact">Get a Quote</a>
             </Button>
-
-
           </nav>
+
+          {/* Desktop Social Icons */}
+          <div className="hidden items-center gap-2 min-[1400px]:flex">
+            <a
+              href="https://x.com/tangentcodestudios"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary text-foreground shadow-sm transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-md"
+              aria-label="Tangent Code Studios on X"
+            >
+              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+
+            <a
+              href="https://web.facebook.com/profile.php?id=61589872315079"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary text-foreground shadow-sm transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-md"
+              aria-label="Tangent Code Studios on Facebook"
+            >
+              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+
+            <a
+              href="https://tiktok.com/@tangentcodestudios"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary text-foreground shadow-sm transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-md"
+              aria-label="Tangent Code Studios on TikTok"
+            >
+              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z" />
+              </svg>
+            </a>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="min-[992px]:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -142,42 +180,44 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="border-t border-border bg-background px-4 py-4 md:hidden">
-            <div className="flex flex-col gap-4">
+          <nav className="border-t border-border bg-background px-4 pb-5 pt-4 min-[992px]:hidden">
+            <div className="flex max-w-sm flex-col gap-3">
               <a
                 href="#services"
-                className="text-sm font-medium text-muted-foreground"
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </a>
               <a
                 href="#portfolio"
-                className="text-sm font-medium text-muted-foreground"
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Portfolio
               </a>
               <a
                 href="#how-it-works"
-                className="text-sm font-medium text-muted-foreground"
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 How It Works
               </a>
               <a
                 href="#contact"
-                className="text-sm font-medium text-muted-foreground"
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact Us
               </a>
-              <Button
-                className="w-full rounded-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg"
-                asChild
+
+              <a
+                href="#contact"
+                className="mt-2 border-t border-border pt-4 text-sm font-bold text-primary transition-colors hover:text-accent"
+                onClick={() => setMobileMenuOpen(false)}
               >
-                <a href="#contact">Get a Quote</a>
-              </Button>
+                Get a Quote →
+              </a>
             </div>
           </nav>
         )}
