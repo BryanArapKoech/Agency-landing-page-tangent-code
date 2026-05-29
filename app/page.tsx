@@ -690,7 +690,7 @@ Flexible packages designed around your website's needs. Monthly or annual billin
             {/* Middle: Social Icons */}
             <div className="flex items-center justify-center gap-3">
               <a
-                href="https://x.com/tangentcodestudios"
+                href="https://x.com/tangentcodestd"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary text-foreground shadow-sm transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-md"
