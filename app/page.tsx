@@ -402,8 +402,8 @@ Flexible packages designed around your website's needs. Monthly or annual billin
                   Design & Build
                 </h3>
                 <p className="mt-2 text-muted-foreground">
-                  We design and develop your website in 5-7 business days with
-                  your feedback
+                  Most standard business websites can be ready within 5–7 business days. 
+                  Custom websites with advanced features are planned around the scope, functionality, and feedback process.
                 </p>
               </div>
 
@@ -447,7 +447,7 @@ Flexible packages designed around your website's needs. Monthly or annual billin
                   Fast Delivery
                 </h3>
                 <p className="mt-2 text-primary-foreground/80">
-                  Average turnaround of 7 days. No long waits or endless
+                  The average turnaround of standard business websites is 7 days. No long waits or endless
                   revision cycles.
                 </p>
               </div>
@@ -457,7 +457,7 @@ Flexible packages designed around your website's needs. Monthly or annual billin
                   <DollarSign className="h-7 w-7 text-accent-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold text-primary-foreground">
-                  Fixed Pricing
+                  Transparent Pricing
                 </h3>
                 <p className="mt-2 text-primary-foreground/80">
                   No hidden fees or surprise invoices. You know exactly what
@@ -616,10 +616,14 @@ Flexible packages designed around your website's needs. Monthly or annual billin
       <footer className="border-t border-border bg-card px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-            <div className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-                <Code className="h-5 w-5 text-primary-foreground" />
-              </div>
+            <div className="flex items-center gap-2">              
+              <Image
+                src="/TCS_logo_favicon.png"
+                alt="Tangent Code Studios"
+                width={36}
+                height={36}
+                className="rounded-lg"
+              />
               <span className="text-lg font-semibold text-foreground">
                 Tangent Code Studios
               </span>
