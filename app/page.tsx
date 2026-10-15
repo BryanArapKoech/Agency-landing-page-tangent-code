@@ -362,7 +362,7 @@ Flexible packages designed around your website's needs. Monthly or annual billin
                   title: "E-Commerce Platform",
                   category: "Online Store",
                   image: "/portfolio/1cherussportswear.png",
-                  link: "https://cherusportswear.co.ke",
+                  link: "https://cherussportswear.co.ke",
                 },
                 {
                   title: "SaaS Dashboard",
@@ -517,7 +517,7 @@ Flexible packages designed around your website's needs. Monthly or annual billin
                 </h3>
                 <p className="mt-2 text-muted-foreground">
                   Your site goes live with ongoing support and maintenance
-                  options
+                  options.
                 </p>
               </div>
             </div>
